@@ -1,0 +1,36 @@
+/**
+ * Yo, this is where it all began. Nucleus started as a hackday project
+ * - and look at it! It's in puberty now. Damn, they grow up really fast.
+ * Anyway, if you love to code and would like to hack with us, check out our
+ * open positions: https://www.urlaubspiraten.de/jobs
+ *
+ * @molecule Sponsors
+ * @markup
+ *  <div class="sponsors">
+ *    <div class="sponsors__sponsor sponsors--hp"></div>
+ *    <div class="sponsors__sponsor sponsors--pt"></div>
+ *  </div>
+ */
+.sponsors {
+  text-align: center;
+
+  &::before {
+    content: 'Made by pirates from';
+    display: block;
+    margin-bottom: 2em;
+    color: $color--light-gray;
+    font-size: 12px;
+  }
+
+  .sponsors__sponsor {
+    display: inline-block;
+    border: none;
+  }
+  .sponsors__sponsor.sponsors--hp {
+    @include retina-sprite($logo-hp-group);
+    margin-right: 40px;
+  }
+  .sponsors__sponsor.sponsors--pt {
+    @include retina-sprite($logo-pt-group);
+  }
+}
